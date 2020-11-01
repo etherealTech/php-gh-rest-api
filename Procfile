@@ -1,0 +1,2 @@
+web: composer run production
+

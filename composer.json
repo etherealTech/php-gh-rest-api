@@ -1,0 +1,36 @@
+{
+    "name": "etherio/gh-sqlite",
+    "description": "The Github REST API",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ethereal",
+            "email": "ethereal97@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-dist": true,
+    "require": {
+        "php": "^7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Ethereal\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "scripts": {
+        "dev": [
+            "@php -S localhost:${PORT:-3000} -t public"
+        ],
+        "web": [
+            "heroku-php-apache2 public"
+        ]
+    },
+    "require-dev": {
+        "heroku/heroku-buildpack-php": "dev-master"
+    }
+}
